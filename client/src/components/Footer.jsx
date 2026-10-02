@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, Mail, MapPin, Clock, MessageCircle, Lock } from 'lucide-react';
+import { Instagram, Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { useSettings } from '../context/SettingsContext';
 
 const Footer = () => {
@@ -131,15 +131,6 @@ const Footer = () => {
             <Link to="/book" className="hover:text-champagne-600 uppercase tracking-widest">
               Reserve Date
             </Link>
-            <a 
-              href={import.meta.env.VITE_ADMIN_URL || "/admin"} 
-              className="inline-flex items-center gap-1 hover:text-champagne-600 uppercase tracking-widest"
-              target={import.meta.env.VITE_ADMIN_URL ? "_blank" : undefined}
-              rel={import.meta.env.VITE_ADMIN_URL ? "noopener noreferrer" : undefined}
-            >
-              <Lock className="w-3 h-3" />
-              <span>Admin</span>
-            </a>
           </div>
         </div>
       </div>
