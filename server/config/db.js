@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 let mongodProc = null;
 
 export const connectDB = async () => {
-  const uri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/tejmakeup';
+  const uri = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/tejmakeup';
   
   try {
     await mongoose.connect(uri, { serverSelectionTimeoutMS: 2000 });
