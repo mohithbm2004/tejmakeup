@@ -13,9 +13,10 @@ const InstagramGrid = ({ items = [] }) => {
     category: item.category
   }));
 
-  const instagramHandle = settings.instagram
-    ? settings.instagram.split('/').filter(Boolean).pop() || 'tejmakeup'
-    : 'tejmakeup';
+  const rawHandle = settings.instagram
+    ? settings.instagram.split('/').filter(Boolean).pop()?.split('?')[0] || 'tej_makeupartist'
+    : 'tej_makeupartist';
+  const instagramHandle = rawHandle.replace('@', '');
 
   return (
     <section className="py-24 bg-[#FAF7F2] border-t border-[#EBE3D5]">

@@ -6,11 +6,11 @@ const r = Router();
 
 const defaultSettings = {
   businessName: 'Tej Makeup Artistry',
-  phone: '+91 98765 43210',
-  whatsapp: '+919876543210',
+  phone: '+91 91132 32920',
+  whatsapp: '+919113232920',
   whatsappMessage: 'Hello Tej, I would like to inquire about availability and packages for my upcoming event.',
   email: 'contact@tejmakeup.com',
-  instagram: 'https://instagram.com/tejmakeup',
+  instagram: 'https://www.instagram.com/tej_makeupartist?stkn=MXUxcXE1cXZua2F6Yw%3D%3D&utm_source=qr',
   address: 'Bespoke Private Studio, Mumbai | Destination Bookings Worldwide',
   mapsUrl: 'https://maps.google.com',
   workingHours: 'Monday – Sunday: 08:00 AM – 08:00 PM (By Appointment)',

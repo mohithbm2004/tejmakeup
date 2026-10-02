@@ -616,11 +616,11 @@ console.log('[Seed] Created About profile');
 // 7. Site Settings
 await SiteSettings.create({
   businessName: 'Tej Makeup Artistry',
-  phone: '+91 98765 43210',
-  whatsapp: '+919876543210',
+  phone: '+91 91132 32920',
+  whatsapp: '+919113232920',
   whatsappMessage: 'Hi Tej, I would love to check your availability and package details for my wedding/event!',
   email: 'concierge@tejmakeup.com',
-  instagram: 'https://instagram.com/tejmakeup',
+  instagram: 'https://www.instagram.com/tej_makeupartist?stkn=MXUxcXE1cXZua2F6Yw%3D%3D&utm_source=qr',
   address: 'Bespoke Private Studio, Bandra West, Mumbai | Available Worldwide for Destinations',
   mapsUrl: 'https://maps.google.com/?q=Bandra+West+Mumbai',
   workingHours: 'Mon – Sun: 08:00 AM – 08:00 PM (Strictly by prior appointment)',

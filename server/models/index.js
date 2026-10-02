@@ -159,14 +159,14 @@ export const SiteSettings = model(
   new Schema(
     {
       businessName: { type: String, default: 'Tej Makeup Artistry' },
-      phone: { type: String, default: '+91 98765 43210' },
-      whatsapp: { type: String, default: '+919876543210' },
+      phone: { type: String, default: '+91 91132 32920' },
+      whatsapp: { type: String, default: '+919113232920' },
       whatsappMessage: {
         type: String,
         default: 'Hi Tej, I would love to inquire about availability for my upcoming wedding/event!'
       },
       email: { type: String, default: 'contact@tejmakeup.com' },
-      instagram: { type: String, default: 'https://instagram.com/tejmakeup' },
+      instagram: { type: String, default: 'https://www.instagram.com/tej_makeupartist?stkn=MXUxcXE1cXZua2F6Yw%3D%3D&utm_source=qr' },
       address: { type: String, default: 'Bespoke Studio, Mumbai / Available Worldwide' },
       mapsUrl: { type: String, default: 'https://maps.google.com' },
       workingHours: { type: String, default: 'Mon - Sun: 08:00 AM - 08:00 PM (By Appointment)' },
