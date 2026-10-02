@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+
   body {
     background-color: #FAF8F2;
     color: #1A1715;
@@ -12,10 +20,34 @@
   h1, h2, h3, h4, h5, h6, .font-serif {
     font-family: 'Cormorant Garamond', Georgia, serif;
     letter-spacing: -0.01em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  @media screen and (max-width: 768px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
+
+  img, video, canvas {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-/* Luxury Editorial Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.touch-action-manipulation {
+  touch-action: manipulation;
+}
+
 .gold-gradient-text {
   background: linear-gradient(135deg, #A88238 0%, #D4AF37 50%, #947128 100%);
   -webkit-background-clip: text;
@@ -38,7 +70,6 @@
   box-shadow: 0 15px 35px -10px rgba(197, 160, 89, 0.15);
 }
 
-/* Custom subtle scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -52,16 +83,4 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #B08842;
-}
-
-/* Image zoom effect */
-.editorial-img-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.editorial-img-wrap img {
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.editorial-img-wrap:hover img {
-  transform: scale(1.05);
 }

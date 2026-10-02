@@ -62,7 +62,7 @@ const BeforeAfterSlider = ({ initialItems }) => {
     <div className="w-full max-w-5xl mx-auto">
       {/* Transformation Selector Tabs */}
       {items.length > 1 && (
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center sm:justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-2 py-1">
           {items.map((it, idx) => (
             <button
               key={it._id || idx}
@@ -70,9 +70,9 @@ const BeforeAfterSlider = ({ initialItems }) => {
                 setActiveIndex(idx);
                 setSliderPosition(50);
               }}
-              className={`px-4 py-2 text-xs uppercase tracking-widest transition-all duration-300 border ${
+              className={`flex-shrink-0 px-3.5 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300 border ${
                 activeIndex === idx
-                  ? 'bg-noir text-ivory border-noir shadow-sm'
+                  ? 'bg-noir text-ivory border-noir shadow-sm font-semibold'
                   : 'bg-white/80 text-sand-700 border-sand-300 hover:border-champagne-500 hover:text-noir'
               }`}
             >
@@ -87,7 +87,7 @@ const BeforeAfterSlider = ({ initialItems }) => {
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
-        className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden select-none cursor-ew-resize border border-sand-300 shadow-xl bg-sand-100"
+        className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden select-none cursor-ew-resize border border-sand-300 shadow-xl bg-sand-100 touch-none"
       >
         {/* AFTER Image (Full background) */}
         <img
@@ -95,7 +95,7 @@ const BeforeAfterSlider = ({ initialItems }) => {
           alt={`After transformation - ${current.title}`}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
-        <div className="absolute top-4 right-4 bg-noir/70 backdrop-blur-md text-ivory text-[10px] uppercase tracking-widest px-3 py-1 font-medium pointer-events-none border border-champagne-500/30">
+        <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-noir/70 backdrop-blur-md text-ivory text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 sm:px-3 py-1 font-medium pointer-events-none border border-champagne-500/30">
           Couture Glow (After)
         </div>
 
@@ -109,7 +109,7 @@ const BeforeAfterSlider = ({ initialItems }) => {
             alt={`Before transformation - ${current.title}`}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute top-4 left-4 bg-noir/70 backdrop-blur-md text-ivory text-[10px] uppercase tracking-widest px-3 py-1 font-medium pointer-events-none border border-sand-400/30">
+          <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-noir/70 backdrop-blur-md text-ivory text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 sm:px-3 py-1 font-medium pointer-events-none border border-sand-400/30">
             Natural Canvas (Before)
           </div>
         </div>
@@ -122,7 +122,7 @@ const BeforeAfterSlider = ({ initialItems }) => {
           <div
             onMouseDown={() => setIsDragging(true)}
             onTouchStart={() => setIsDragging(true)}
-            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-ivory border-2 border-champagne-500 text-noir shadow-2xl flex items-center justify-center cursor-ew-resize hover:scale-110 active:scale-95 transition-transform pointer-events-auto"
+            className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-ivory border-2 border-champagne-500 text-noir shadow-2xl flex items-center justify-center cursor-ew-resize hover:scale-110 active:scale-95 transition-transform pointer-events-auto touch-none"
           >
             <ChevronsLeftRight className="w-4 h-4 text-champagne-700" />
           </div>

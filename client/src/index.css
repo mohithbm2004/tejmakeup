@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+
   body {
     background-color: #FAF8F2;
     color: #1A1715;
@@ -12,7 +20,35 @@
   h1, h2, h3, h4, h5, h6, .font-serif {
     font-family: 'Cormorant Garamond', Georgia, serif;
     letter-spacing: -0.01em;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
+
+  /* Prevent automatic iOS zoom when focusing inputs on small screens */
+  @media screen and (max-width: 768px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
+
+  img, video, canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Hide scrollbar for clean horizontal slider lists on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Touch manipulation utility for fast tapping without 300ms mobile delay */
+.touch-action-manipulation {
+  touch-action: manipulation;
 }
 
 /* Luxury Editorial Utilities */

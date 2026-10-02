@@ -97,14 +97,14 @@ const Portfolio = () => {
 
           {/* Filter Pills */}
           {categories.length > 1 && (
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-16">
+            <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center sm:justify-center gap-2 mb-12 sm:mb-16 px-4 sm:px-0 py-1 -mx-6 sm:mx-0">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2 text-xs uppercase tracking-widest transition-all duration-300 border ${
+                  className={`flex-shrink-0 px-4 sm:px-5 py-2 text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300 border ${
                     activeCategory === cat
-                      ? 'bg-noir text-ivory border-noir shadow-sm'
+                      ? 'bg-noir text-ivory border-noir shadow-sm font-semibold'
                       : 'bg-white/80 text-sand-700 border-sand-300 hover:border-champagne-500 hover:text-noir'
                   }`}
                 >

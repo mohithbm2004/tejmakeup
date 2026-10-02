@@ -216,15 +216,15 @@ const PortfolioDetail = () => {
             <>
               <button
                 onClick={() => setActiveImageIndex((activeImageIndex - 1 + allImages.length) % allImages.length)}
-                className="absolute left-6 top-1/2 -translate-y-1/2 text-ivory/70 hover:text-ivory p-3 z-50"
+                className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 text-ivory/70 hover:text-ivory p-2 sm:p-3 z-50 focus:outline-none"
               >
-                <ChevronLeft className="w-8 h-8" />
+                <ChevronLeft className="w-7 h-7 sm:w-8 sm:h-8" />
               </button>
               <button
                 onClick={() => setActiveImageIndex((activeImageIndex + 1) % allImages.length)}
-                className="absolute right-6 top-1/2 -translate-y-1/2 text-ivory/70 hover:text-ivory p-3 z-50"
+                className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 text-ivory/70 hover:text-ivory p-2 sm:p-3 z-50 focus:outline-none"
               >
-                <ChevronRight className="w-8 h-8" />
+                <ChevronRight className="w-7 h-7 sm:w-8 sm:h-8" />
               </button>
             </>
           )}

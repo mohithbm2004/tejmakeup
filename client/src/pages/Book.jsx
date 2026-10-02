@@ -122,7 +122,7 @@ I would love to confirm your availability and discuss next steps!`;
       />
 
       <div className="pt-32 pb-24 bg-ivory-100 min-h-screen">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <span className="text-xs uppercase tracking-ultra text-champagne-600 font-semibold block">
@@ -202,7 +202,7 @@ I would love to confirm your availability and discuss next steps!`;
             </div>
           ) : (
             /* Booking Form */
-            <form onSubmit={handleSubmit} className="bg-white border border-sand-200 p-8 md:p-14 shadow-sm space-y-8">
+            <form onSubmit={handleSubmit} className="bg-white border border-sand-200 p-5 sm:p-8 md:p-14 shadow-sm space-y-6 sm:space-y-8">
               {errors.form && (
                 <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-xs">
                   {errors.form}

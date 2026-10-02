@@ -95,7 +95,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-ivory leading-[1.05] tracking-tight max-w-4xl mx-auto"
+            className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light text-ivory leading-[1.08] tracking-tight max-w-4xl mx-auto break-words"
           >
             {settings.heroHeading || 'Skin that breathes. Makeup so precise, it disappears into you.'}
           </motion.h1>
@@ -216,14 +216,14 @@ const Home = () => {
           </div>
 
           {/* Portfolio Category Filter Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16">
+          <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center sm:justify-center gap-2 sm:gap-3 mb-12 sm:mb-16 px-4 sm:px-0 py-1 -mx-6 sm:mx-0">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 sm:px-5 py-2 text-[11px] uppercase tracking-widest transition-all duration-300 ${
+                className={`flex-shrink-0 px-4 sm:px-5 py-2 text-[10px] sm:text-[11px] uppercase tracking-widest transition-all duration-300 ${
                   selectedCategory === cat
-                    ? 'bg-noir text-ivory border border-noir shadow-sm'
+                    ? 'bg-noir text-ivory border border-noir shadow-sm font-semibold'
                     : 'bg-white/80 text-sand-700 border border-sand-300 hover:border-champagne-500 hover:text-noir'
                 }`}
               >
