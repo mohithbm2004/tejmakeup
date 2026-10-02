@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.production
+server/.env
+client/.env
+
+# Local Embedded Database
+server/.mongo-data/
+.mongo-data/
+
+# Build Outputs
+dist/
+client/dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
