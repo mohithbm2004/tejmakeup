@@ -10,15 +10,18 @@ const __dirname = path.dirname(__filename);
 let mongodProc = null;
 
 export const connectDB = async () => {
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
   const uri = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/tejmakeup';
   
   try {
-    await mongoose.connect(uri, { serverSelectionTimeoutMS: 2000 });
-    console.log(`[Database] Connected to MongoDB: ${uri}`);
+    await mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 });
+    console.log(`[Database] Connected to MongoDB`);
     return;
   } catch (err) {
     const isLocal = uri.includes('127.0.0.1') || uri.includes('localhost');
-    if (!isLocal) {
+    if (!isLocal || process.env.VERCEL) {
       console.error('[Database] Failed to connect to MongoDB URI:', err.message);
       throw err;
     }

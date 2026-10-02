@@ -157,7 +157,26 @@ Visit [http://localhost:5173/admin](http://localhost:5173/admin) to log in to th
    - **API Key**
    - **API Secret**
 
-### 3. Backend Deployment (Render / Railway)
+### 3. Unified Deployment on Vercel (Recommended — Multi-Services)
+
+This repository is pre-configured with a root `vercel.json` using **Vercel Services**, allowing you to deploy both the Express API and Vite React frontend together as a single unified project on one domain:
+
+1. Import this repository into [Vercel](https://vercel.com/new).
+2. Leave the **Root Directory** as `./` (repo root). Vercel will automatically read `vercel.json`.
+3. Add Environment Variables in your Vercel Project Settings:
+   - `MONGODB_URI`: `<Your MongoDB Atlas Connection String>`
+   - `JWT_SECRET`: `<A strong random 64-char string>`
+   - `CLOUDINARY_CLOUD_NAME`: `<Your Cloud Name>`
+   - `CLOUDINARY_API_KEY`: `<Your API Key>`
+   - `CLOUDINARY_API_SECRET`: `<Your API Secret>`
+4. Click **Deploy**.
+5. Once deployed:
+   - Frontend is served at `https://your-domain.vercel.app/`
+   - API endpoints are served at `https://your-domain.vercel.app/api/*`
+
+---
+
+### 4. Alternative Separate Backend Deployment (Render / Railway)
 
 #### Deploying on Render:
 1. Create a new **Web Service** on [Render](https://render.com/) and connect your repository.
@@ -167,30 +186,14 @@ Visit [http://localhost:5173/admin](http://localhost:5173/admin) to log in to th
    - **Start Command:** `npm start`
 3. Add Environment Variables:
    - `NODE_ENV`: `production`
-   - `PORT`: `5000` (or leave default assigned by Render)
-   - `MONGO_URI`: `<Your MongoDB Atlas Connection String>`
+   - `PORT`: `5000`
+   - `MONGODB_URI`: `<Your MongoDB Atlas Connection String>`
    - `JWT_SECRET`: `<A strong random 64-char string>`
    - `CLOUDINARY_CLOUD_NAME`: `<Your Cloudinary Cloud Name>`
    - `CLOUDINARY_API_KEY`: `<Your Cloudinary API Key>`
    - `CLOUDINARY_API_SECRET`: `<Your Cloudinary API Secret>`
    - `CLIENT_URL`: `https://your-client-domain.vercel.app`
-   - `ADMIN_EMAIL`: `admin@yourdomain.com`
-   - `ADMIN_PASSWORD`: `<Strong Admin Password>`
-4. Deploy the service. Once deployed, run `npm run seed:admin` and `npm run seed:data` via Render's **Shell** console to initialize data.
-
-### 4. Frontend Deployment (Vercel / Netlify)
-
-#### Deploying on Vercel:
-1. Import your repository into [Vercel](https://vercel.com/).
-2. Set the **Root Directory** to `client`.
-3. Framework Preset: **Vite**.
-4. Build Settings:
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Add Environment Variables:
-   - `VITE_API_URL`: `https://your-server-api.onrender.com/api`
-6. Click **Deploy**.
-7. Update `CLIENT_URL` in your Render backend settings with your production Vercel URL to allow CORS.
+4. Deploy the service. Once deployed, run `npm run seed:admin` and `npm run seed:data` if needed.
 
 ---
 
