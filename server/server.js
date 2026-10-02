@@ -23,11 +23,14 @@ app.use(
   })
 );
 
-// CORS configuration supporting CLIENT_URL and dev origins
+// CORS configuration supporting CLIENT_URL, ADMIN_URL and dev origins
 const allowedOrigins = [
   process.env.CLIENT_URL,
+  process.env.ADMIN_URL,
   'http://localhost:5173',
   'http://127.0.0.1:5173',
+  'http://localhost:5174',
+  'http://127.0.0.1:5174',
   'http://localhost:3000',
   'http://127.0.0.1:3000'
 ].filter(Boolean);
