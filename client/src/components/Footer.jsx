@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { Instagram, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { useSettings } from '../context/SettingsContext';
 
 const Footer = () => {
@@ -116,7 +117,7 @@ const Footer = () => {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-champagne-700 font-semibold hover:text-champagne-600 pt-1"
                 >
-                  <MessageCircle className="w-3.5 h-3.5" />
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                   <span>Chat on WhatsApp</span>
                 </a>
               )}

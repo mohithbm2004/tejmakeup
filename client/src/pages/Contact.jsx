@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram, Send, CheckCircle2 } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { useSettings } from '../context/SettingsContext';
 import api from '../api/axios';
 import SEO from '../components/SEO';
@@ -118,7 +119,7 @@ const Contact = () => {
               {/* Direct WhatsApp Callout */}
               {settings.whatsapp && (
                 <div className="p-8 bg-sand-50 border border-champagne-300 text-center space-y-4">
-                  <MessageCircle className="w-8 h-8 text-emerald-600 mx-auto" />
+                  <WhatsAppIcon className="w-8 h-8 text-emerald-600 mx-auto" />
                   <h4 className="font-serif text-xl text-noir font-normal">Instant WhatsApp Assistance</h4>
                   <p className="text-xs text-sand-600 leading-relaxed font-light">
                     For urgent wedding date availability and bridal portfolio inquiries, chat directly with our booking concierge.

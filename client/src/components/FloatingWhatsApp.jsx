@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { useSettings } from '../context/SettingsContext';
 
 const FloatingWhatsApp = () => {
@@ -30,7 +31,7 @@ const FloatingWhatsApp = () => {
         className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 relative border-2 border-white/60 focus:outline-none"
         aria-label="Chat with Tej on WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 stroke-[1.8]" />
+        <WhatsAppIcon className="w-7 h-7 text-white fill-white" />
         {/* Subtle pulsing badge */}
         <span className="absolute -top-1 -right-1 flex h-4 w-4">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { useSettings } from '../context/SettingsContext';
 
 const Navbar = () => {
@@ -144,7 +145,7 @@ const Navbar = () => {
                   rel="noreferrer"
                   className="flex items-center gap-2.5 text-[#EDE5D8] hover:text-champagne-400 transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                   <span className="tracking-wide">WhatsApp Concierge</span>
                 </a>
               )}
