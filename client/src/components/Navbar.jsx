@@ -37,7 +37,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isTransparent
+        isOpen
+          ? 'bg-[#141210] border-b border-sand-800 py-2.5 sm:py-3 shadow-2xl'
+          : isTransparent
           ? 'bg-transparent border-b border-transparent py-2.5 sm:py-4'
           : 'bg-[#FDFBF7]/95 backdrop-blur-md shadow-sm border-b border-[#EBE3D5] py-2 sm:py-3'
       }`}
@@ -47,14 +49,14 @@ const Navbar = () => {
         <Link to="/" className="group flex flex-col items-start focus:outline-none">
           <span
             className={`font-serif text-lg sm:text-2xl md:text-3xl tracking-widest uppercase font-medium transition-colors ${
-              isTransparent ? 'text-ivory group-hover:text-champagne-300' : 'text-noir group-hover:text-champagne-600'
+              isOpen || isTransparent ? 'text-ivory group-hover:text-champagne-300' : 'text-noir group-hover:text-champagne-600'
             }`}
           >
             {settings.businessName || 'Tej Makeup'}
           </span>
           <span
             className={`hidden sm:block text-[8px] uppercase tracking-ultra font-medium transition-colors ${
-              isTransparent ? 'text-champagne-300' : 'text-champagne-600'
+              isOpen || isTransparent ? 'text-champagne-300' : 'text-champagne-600'
             }`}
           >
             Bridal • Editorial • Occasion
@@ -88,7 +90,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`lg:hidden p-1.5 -mr-1.5 focus:outline-none transition-colors ${
-            isTransparent ? 'text-ivory hover:text-champagne-300' : 'text-noir hover:text-champagne-600'
+            isOpen || isTransparent ? 'text-ivory hover:text-champagne-300' : 'text-noir hover:text-champagne-600'
           }`}
           aria-label="Toggle Navigation Menu"
         >
@@ -96,45 +98,59 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer - High Contrast Solid Luxury Dark Theme */}
       {isOpen && (
-        <div className="lg:hidden bg-ivory-100/98 backdrop-blur-xl border-b border-sand-300 px-6 py-8 space-y-6 shadow-xl animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col space-y-5">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `text-sm uppercase tracking-widest transition-colors ${
-                    isActive ? 'text-champagne-600 font-semibold' : 'text-sand-800 hover:text-noir'
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-          </nav>
+        <>
+          {/* Backdrop to dismiss on outside click */}
+          <div
+            className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-xs z-[-1]"
+            onClick={() => setIsOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="lg:hidden bg-[#141210] border-b border-[#2A241E] px-6 py-8 space-y-6 shadow-2xl animate-in slide-in-from-top duration-300">
+            <nav className="flex flex-col space-y-5">
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `text-[15px] sm:text-base uppercase tracking-[0.2em] transition-all duration-200 ${
+                      isActive
+                        ? 'text-champagne-400 font-semibold border-l-2 border-champagne-400 pl-3'
+                        : 'text-[#FAF8F2] hover:text-champagne-300 hover:pl-2 font-normal'
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+            </nav>
 
-          <div className="pt-6 border-t border-sand-300/80 flex flex-col space-y-3 text-xs text-sand-600">
-            {settings.phone && (
-              <a href={`tel:${settings.phone}`} className="flex items-center gap-2 hover:text-champagne-600">
-                <Phone className="w-3.5 h-3.5 text-champagne-600" />
-                <span>{settings.phone}</span>
-              </a>
-            )}
-            {settings.whatsapp && (
-              <a
-                href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}`}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:text-champagne-600"
-              >
-                <MessageCircle className="w-3.5 h-3.5 text-champagne-600" />
-                <span>WhatsApp Concierge</span>
-              </a>
-            )}
+            <div className="pt-6 border-t border-[#2A241E] flex flex-col space-y-3.5 text-xs text-sand-300">
+              {settings.phone && (
+                <a
+                  href={`tel:${settings.phone.replace(/\s+/g, '')}`}
+                  className="flex items-center gap-2.5 text-[#EDE5D8] hover:text-champagne-400 transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-champagne-400" />
+                  <span className="font-mono tracking-wider">{settings.phone}</span>
+                </a>
+              )}
+              {settings.whatsapp && (
+                <a
+                  href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2.5 text-[#EDE5D8] hover:text-champagne-400 transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                  <span className="tracking-wide">WhatsApp Concierge</span>
+                </a>
+              )}
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
