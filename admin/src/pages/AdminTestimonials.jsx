@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit2, Trash2, MessageSquare, Star, Upload, X } from 'lucide-react';
-import api from '../../api/axios';
-import { TableSkeleton } from '../../components/LoadingSkeleton';
-import EmptyState from '../../components/EmptyState';
+import api from '../api/axios';
+import { TableSkeleton } from '../components/LoadingSkeleton';
+import EmptyState from '../components/EmptyState';
 
 const AdminTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);

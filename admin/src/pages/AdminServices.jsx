@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit2, Trash2, Sparkles, Upload, X, Star, Clock } from 'lucide-react';
-import api from '../../api/axios';
-import { TableSkeleton } from '../../components/LoadingSkeleton';
-import EmptyState from '../../components/EmptyState';
+import api from '../api/axios';
+import { TableSkeleton } from '../components/LoadingSkeleton';
+import EmptyState from '../components/EmptyState';
 
 const AdminServices = () => {
   const [services, setServices] = useState([]);

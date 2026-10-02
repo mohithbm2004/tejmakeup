@@ -12,9 +12,9 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
-import api from '../../api/axios';
-import { TableSkeleton } from '../../components/LoadingSkeleton';
-import EmptyState from '../../components/EmptyState';
+import api from '../api/axios';
+import { TableSkeleton } from '../components/LoadingSkeleton';
+import EmptyState from '../components/EmptyState';
 
 const AdminBookings = () => {
   const [bookings, setBookings] = useState([]);

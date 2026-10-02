@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { User, Upload, Check, Sparkles, Award } from 'lucide-react';
-import api from '../../api/axios';
+import api from '../api/axios';
 
 const AdminAbout = () => {
   const [loading, setLoading] = useState(true);

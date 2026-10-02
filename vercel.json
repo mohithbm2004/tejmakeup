@@ -5,6 +5,10 @@
       "root": "client",
       "framework": "vite"
     },
+    "admin": {
+      "root": "admin",
+      "framework": "vite"
+    },
     "server": {
       "root": "server",
       "framework": "express"
@@ -15,6 +19,18 @@
       "source": "/api/(.*)",
       "destination": {
         "service": "server"
+      }
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": {
+        "service": "admin"
+      }
+    },
+    {
+      "source": "/admin",
+      "destination": {
+        "service": "admin"
       }
     },
     {

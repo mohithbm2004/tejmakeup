@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Settings, Check, Phone, MessageCircle, Mail, MapPin, Globe } from 'lucide-react';
-import { useSettings } from '../../context/SettingsContext';
+import { useSettings } from '../context/SettingsContext';
 
 const AdminSettings = () => {
   const { settings, updateSettings, loading } = useSettings();

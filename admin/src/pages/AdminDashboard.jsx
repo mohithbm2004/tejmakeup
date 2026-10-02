@@ -13,8 +13,8 @@ import {
   Clock,
   Eye
 } from 'lucide-react';
-import api from '../../api/axios';
-import { TableSkeleton } from '../../components/LoadingSkeleton';
+import api from '../api/axios';
+import { TableSkeleton } from '../components/LoadingSkeleton';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState(null);

@@ -13,8 +13,8 @@ import {
   Menu,
   X
 } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
-import { useSettings } from '../../context/SettingsContext';
+import { useAuth } from '../context/AuthContext';
+import { useSettings } from '../context/SettingsContext';
 
 const AdminLayout = () => {
   const { user, logout, loading, isAuthenticated } = useAuth();
@@ -25,18 +25,18 @@ const AdminLayout = () => {
 
   // If not authenticated, redirect to login
   if (!loading && !isAuthenticated) {
-    navigate('/admin/login', { replace: true, state: { from: location } });
+    navigate('/login', { replace: true, state: { from: location } });
     return null;
   }
 
   const navItems = [
-    { name: 'Dashboard', path: '/admin', icon: LayoutDashboard },
-    { name: 'Portfolio', path: '/admin/portfolio', icon: Image },
-    { name: 'Services', path: '/admin/services', icon: Sparkles },
-    { name: 'Testimonials', path: '/admin/testimonials', icon: MessageSquare },
-    { name: 'Bookings', path: '/admin/bookings', icon: CalendarCheck },
-    { name: 'About Artist', path: '/admin/about', icon: User },
-    { name: 'Site Settings', path: '/admin/settings', icon: Settings },
+    { name: 'Dashboard', path: '/', icon: LayoutDashboard },
+    { name: 'Portfolio', path: '/portfolio', icon: Image },
+    { name: 'Services', path: '/services', icon: Sparkles },
+    { name: 'Testimonials', path: '/testimonials', icon: MessageSquare },
+    { name: 'Bookings', path: '/bookings', icon: CalendarCheck },
+    { name: 'About Artist', path: '/about', icon: User },
+    { name: 'Site Settings', path: '/settings', icon: Settings },
   ];
 
   return (
@@ -44,7 +44,7 @@ const AdminLayout = () => {
       {/* Sidebar for Desktop */}
       <aside className="hidden md:flex flex-col w-64 bg-noir text-ivory border-r border-sand-800 flex-shrink-0">
         <div className="p-6 border-b border-sand-800/80">
-          <Link to="/admin" className="block">
+          <Link to="/" className="block">
             <span className="font-serif text-xl tracking-widest text-ivory uppercase font-medium">
               {settings.businessName || 'Tej Makeup'}
             </span>
@@ -57,7 +57,7 @@ const AdminLayout = () => {
         <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
-            const isExact = item.path === '/admin';
+            const isExact = item.path === '/';
             return (
               <NavLink
                 key={item.path}

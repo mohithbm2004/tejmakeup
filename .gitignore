@@ -2,6 +2,7 @@
 node_modules/
 server/node_modules/
 client/node_modules/
+admin/node_modules/
 
 # Environment Variables & Secrets
 .env
@@ -9,6 +10,7 @@ client/node_modules/
 .env.production
 server/.env
 client/.env
+admin/.env
 
 # Local Embedded Database
 server/.mongo-data/
@@ -17,6 +19,7 @@ server/.mongo-data/
 # Build Outputs
 dist/
 client/dist/
+admin/dist/
 build/
 
 # Logs

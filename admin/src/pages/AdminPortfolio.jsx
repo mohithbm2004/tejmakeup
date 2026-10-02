@@ -15,9 +15,9 @@ import {
   GripVertical,
   ExternalLink
 } from 'lucide-react';
-import api from '../../api/axios';
-import { TableSkeleton } from '../../components/LoadingSkeleton';
-import EmptyState from '../../components/EmptyState';
+import api from '../api/axios';
+import { TableSkeleton } from '../components/LoadingSkeleton';
+import EmptyState from '../components/EmptyState';
 
 const AdminPortfolio = () => {
   const [items, setItems] = useState([]);
