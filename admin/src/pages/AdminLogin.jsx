@@ -11,8 +11,8 @@ const AdminLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [email, setEmail] = useState('admin@tejmakeup.com');
-  const [password, setPassword] = useState('adminpassword123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -29,11 +29,11 @@ const AdminLogin = () => {
       navigate(from, { replace: true });
     } catch (err) {
       if (err.response?.status === 401) {
-        setError('Invalid email or password. Default is: admin@tejmakeup.com / adminpassword123');
+        setError('Invalid email or password. Please verify your credentials.');
       } else if (err.code === 'ERR_NETWORK' || !err.response) {
-        setError('Cannot reach backend server. Please verify that the API server is running on port 5000.');
+        setError('Cannot reach backend server. Please verify that the API server is running and accessible.');
       } else if (err.response?.status === 405 || err.response?.status === 404) {
-        setError(`Backend API endpoint not reachable (${err.response.status}). If deployed, set VITE_API_URL to your backend URL.`);
+        setError(`Backend API endpoint not reachable (${err.response.status}). If deployed, please configure VITE_API_URL.`);
       } else {
         setError(err.response?.data?.message || 'Failed to sign in. Please verify your connection.');
       }
@@ -116,16 +116,6 @@ const AdminLogin = () => {
                   className="w-full pl-10 pr-10 py-3 bg-sand-50/50 border border-sand-300 text-xs focus:outline-none focus:border-champagne-500 font-mono"
                 />
                 <Lock className="w-4 h-4 text-sand-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-              </div>
-            </div>
-
-            <div className="p-3 bg-champagne-50/80 border border-champagne-200 text-sand-700 text-[11px] space-y-1">
-              <span className="font-semibold text-champagne-800 uppercase tracking-widest text-[9px] block">
-                Atelier Access Credentials
-              </span>
-              <div className="flex justify-between font-mono text-[10px] text-sand-800">
-                <span>Email: <strong className="text-noir">admin@tejmakeup.com</strong></span>
-                <span>Pass: <strong className="text-noir">adminpassword123</strong></span>
               </div>
             </div>
 
