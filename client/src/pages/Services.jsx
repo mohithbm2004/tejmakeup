@@ -118,10 +118,10 @@ const Services = () => {
                       <img
                         src={
                           srv.image ||
-                          'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800'
+                          '/images/IMG_1466.jpg'
                         }
                         alt={srv.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover object-[center_20%] face-align transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute top-3 left-3 bg-noir/70 backdrop-blur-sm text-ivory text-[9px] uppercase tracking-widest px-2.5 py-1">
                         {srv.category}

@@ -5,7 +5,6 @@ import { ArrowRight, Star, Sparkles, Calendar, Clock, Award, ShieldCheck, HeartH
 import api from '../api/axios';
 import { useSettings } from '../context/SettingsContext';
 import SEO from '../components/SEO';
-import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import InstagramGrid from '../components/InstagramGrid';
 import { CardSkeleton, MasonrySkeleton } from '../components/LoadingSkeleton';
 
@@ -25,8 +24,7 @@ const Home = () => {
     'RECEPTION',
     'PARTY',
     'EDITORIAL',
-    'HAIR',
-    'BEFORE & AFTER'
+    'HAIR'
   ];
 
   useEffect(() => {
@@ -68,10 +66,10 @@ const Home = () => {
             transition={{ duration: 7, ease: 'easeOut' }}
             src={
               settings.heroImage ||
-              'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1800&auto=format&fit=crop'
+              '/images/IMG_1465.jpg'
             }
             alt="Haute bridal and editorial makeup artistry"
-            className="w-full h-full object-cover object-top opacity-55 brightness-90"
+            className="w-full h-full object-cover object-[center_22%] face-align opacity-55 brightness-90"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/40 to-[#0D0D0D]/70" />
         </div>
@@ -170,7 +168,7 @@ const Home = () => {
             </h2>
             <p className="text-sand-700 text-sm leading-relaxed mb-6 font-light">
               {about?.bio ||
-                'Trained across European ateliers and seasoned by royal heritage weddings across India, Tej crafts looks characterized by ultra-pure second-skin radiance, seamless micro-contours, and architectural eye styling.'}
+                'Trained across premier beauty academies and seasoned by luxury heritage weddings across India, Tejas R crafts looks characterized by ultra-pure second-skin radiance, seamless micro-contours, and architectural eye styling.'}
             </p>
             <Link
               to="/about"
@@ -241,7 +239,6 @@ const Home = () => {
                 {portfolio
                   .filter((item) => {
                     if (selectedCategory === 'ALL') return true;
-                    if (selectedCategory === 'BEFORE & AFTER') return item.isBeforeAfter || item.category?.toLowerCase().includes('before');
                     return item.category?.toLowerCase() === selectedCategory.toLowerCase();
                   })
                   .slice(0, 7)
@@ -276,7 +273,7 @@ const Home = () => {
                           <img
                             src={item.coverImage || item.images?.[0]?.url}
                             alt={item.title}
-                            className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${aspectClass}`}
+                            className={`w-full h-full object-cover object-[center_20%] face-align transition-transform duration-700 ease-out group-hover:scale-105 ${aspectClass}`}
                             loading="lazy"
                           />
                           {/* Subtle dark overlay with category and title reveal on hover */}
@@ -338,9 +335,9 @@ const Home = () => {
                   <div className="space-y-4">
                     <div className="aspect-[16/10] overflow-hidden bg-sand-200 mb-6">
                       <img
-                        src={srv.image || 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800'}
+                        src={srv.image || '/images/IMG_1466.jpg'}
                         alt={srv.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover object-[center_20%] face-align transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                     <div className="flex items-center justify-between text-xs text-champagne-700">
@@ -382,24 +379,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Before & After Interactive Slider */}
-      <section className="py-24 bg-[#F8F5EE] border-t border-[#EBE3D5]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs uppercase tracking-ultra text-champagne-600 font-semibold block">
-              TRANSFORMATIONS
-            </span>
-            <h2 className="font-serif text-3xl sm:text-5xl text-noir font-normal">
-              BEFORE & AFTER
-            </h2>
-            <p className="text-sand-600 text-xs sm:text-sm font-light">
-              Slide to reveal the seamless transition from prep to high-definition bridal glow.
-            </p>
-          </div>
-
-          <BeforeAfterSlider />
-        </div>
-      </section>
 
       {/* Minimal Luxury Testimonials */}
       <section className="py-28 bg-white border-t border-[#EBE3D5]">
@@ -456,10 +435,10 @@ const Home = () => {
           <img
             src={
               settings.heroImage ||
-              'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1800&auto=format&fit=crop'
+              '/images/IMG_1465.jpg'
             }
             alt="Luxury Bridal Booking"
-            className="w-full h-full object-cover opacity-25 brightness-75 scale-105"
+            className="w-full h-full object-cover object-[center_20%] face-align opacity-25 brightness-75 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-[#0D0D0D]/60 to-[#0D0D0D]/90" />
         </div>

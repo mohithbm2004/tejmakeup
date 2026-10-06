@@ -96,11 +96,11 @@ const PortfolioDetail = () => {
           </div>
 
           {/* Main Hero Image */}
-          <div className="relative aspect-[16/10] md:aspect-[16/9] w-full overflow-hidden bg-sand-200 border border-sand-300 shadow-2xl mb-6 group cursor-zoom-in">
+          <div className="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] max-h-[700px] w-full overflow-hidden bg-sand-200 border border-sand-300 shadow-2xl mb-6 group cursor-zoom-in">
             <img
               src={currentImg.url}
               alt={currentImg.alt || item.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+              className="w-full h-full object-cover object-[center_20%] face-align transition-transform duration-700 group-hover:scale-102"
               onClick={() => setLightboxOpen(true)}
             />
             <div
@@ -124,7 +124,7 @@ const PortfolioDetail = () => {
                       : 'border-transparent opacity-70 hover:opacity-100'
                   }`}
                 >
-                  <img src={img.url} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                  <img src={img.url} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover object-[center_20%] face-align" />
                 </button>
               ))}
             </div>
@@ -140,7 +140,7 @@ const PortfolioDetail = () => {
                 Envisioning a similar look for your wedding?
               </h3>
               <p className="text-sand-600 text-xs mt-1 font-light">
-                Consult with Tej to customize this palette and architecture to your facial contour and wedding attire.
+                Consult with Tejas R to customize this palette and architecture to your facial contour and wedding attire.
               </p>
             </div>
             <Link
@@ -162,7 +162,7 @@ const PortfolioDetail = () => {
                   <img
                     src={item.prev.coverImage}
                     alt={item.prev.title}
-                    className="w-14 h-14 object-cover border border-sand-300 flex-shrink-0"
+                    className="w-14 h-14 object-cover object-[center_20%] face-align border border-sand-300 flex-shrink-0"
                   />
                 )}
                 <div>
@@ -193,7 +193,7 @@ const PortfolioDetail = () => {
                   <img
                     src={item.next.coverImage}
                     alt={item.next.title}
-                    className="w-14 h-14 object-cover border border-sand-300 flex-shrink-0"
+                    className="w-14 h-14 object-cover object-[center_20%] face-align border border-sand-300 flex-shrink-0"
                   />
                 )}
               </Link>

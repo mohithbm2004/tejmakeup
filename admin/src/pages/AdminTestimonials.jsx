@@ -201,7 +201,7 @@ const AdminTestimonials = () => {
                         <img
                           src={t.avatar}
                           alt={t.clientName}
-                          className="w-10 h-10 rounded-full object-cover border border-sand-300"
+                          className="w-10 h-10 rounded-full object-cover object-[center_20%] face-align border border-sand-300"
                         />
                       ) : (
                         <div className="w-10 h-10 rounded-full bg-champagne-100 text-champagne-800 font-serif font-bold flex items-center justify-center">
@@ -356,7 +356,7 @@ const AdminTestimonials = () => {
                 </label>
                 <div className="flex items-center gap-3">
                   {avatarPreview && (
-                    <img src={avatarPreview} alt="Avatar" className="w-12 h-12 rounded-full object-cover border" />
+                    <img src={avatarPreview} alt="Avatar" className="w-12 h-12 rounded-full object-cover object-[center_20%] face-align border" />
                   )}
                   <label className="cursor-pointer px-3 py-1.5 bg-sand-200 hover:bg-sand-300 text-noir text-xs uppercase tracking-wider font-medium flex items-center gap-2">
                     <Upload className="w-3.5 h-3.5" />

@@ -315,7 +315,7 @@ const AdminAbout = () => {
               </label>
               <div className="flex items-center gap-4">
                 {imagePreview && (
-                  <img src={imagePreview} alt="Primary" className="w-16 h-20 object-cover border" />
+                  <img src={imagePreview} alt="Primary" className="w-16 h-20 object-cover object-[center_20%] face-align border" />
                 )}
                 <label className="cursor-pointer px-3.5 py-2 bg-sand-200 hover:bg-sand-300 text-xs uppercase font-medium flex items-center gap-2">
                   <Upload className="w-3.5 h-3.5" />
@@ -341,7 +341,7 @@ const AdminAbout = () => {
               </label>
               <div className="flex items-center gap-4">
                 {secondaryImagePreview && (
-                  <img src={secondaryImagePreview} alt="Secondary" className="w-16 h-20 object-cover border" />
+                  <img src={secondaryImagePreview} alt="Secondary" className="w-16 h-20 object-cover object-[center_20%] face-align border" />
                 )}
                 <label className="cursor-pointer px-3.5 py-2 bg-sand-200 hover:bg-sand-300 text-xs uppercase font-medium flex items-center gap-2">
                   <Upload className="w-3.5 h-3.5" />

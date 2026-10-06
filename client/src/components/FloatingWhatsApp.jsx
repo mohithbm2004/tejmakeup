@@ -11,7 +11,7 @@ const FloatingWhatsApp = () => {
 
   const cleanNumber = settings.whatsapp.replace(/[^0-9]/g, '');
   const encodedText = encodeURIComponent(
-    settings.whatsappMessage || 'Hi Tej, I would love to check your availability for my upcoming wedding/event!'
+    settings.whatsappMessage || 'Hi Tejas R, I would love to check your availability for my upcoming wedding/event!'
   );
   const waUrl = `https://wa.me/${cleanNumber}?text=${encodedText}`;
 
@@ -29,7 +29,7 @@ const FloatingWhatsApp = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 relative border-2 border-white/60 focus:outline-none"
-        aria-label="Chat with Tej on WhatsApp"
+        aria-label="Chat with Tejas R on WhatsApp"
       >
         <WhatsAppIcon className="w-7 h-7 text-white fill-white" />
         {/* Subtle pulsing badge */}

@@ -156,7 +156,7 @@ const AdminBookings = () => {
           {bookings.map((b) => {
             const cleanPhone = b.phone ? b.phone.replace(/[^0-9]/g, '') : '';
             const waText = encodeURIComponent(
-              `Hi ${b.name}, thank you for inquiring with Tej Makeup Artistry for your ${b.eventType} on ${new Date(
+              `Hi ${b.name}, thank you for inquiring with Tej Makeup Artist for your ${b.eventType} on ${new Date(
                 b.eventDate
               ).toLocaleDateString()} in ${b.location}. We are thrilled to connect with you!`
             );
@@ -210,7 +210,7 @@ const AdminBookings = () => {
                       {b.email && (
                         <a
                           href={`mailto:${b.email}?subject=${encodeURIComponent(
-                            `Tej Makeup Artistry - Consultation for your ${b.eventType}`
+                            `Tej Makeup Artist - Consultation for your ${b.eventType}`
                           )}`}
                           className="inline-flex items-center gap-1 px-3 py-1.5 bg-sand-100 hover:bg-sand-200 text-noir text-xs rounded transition-colors font-medium"
                           title="Email Client"

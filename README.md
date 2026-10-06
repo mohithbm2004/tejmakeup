@@ -1,6 +1,6 @@
-# Tej Makeup Artistry — Luxury Bridal & Editorial Web Application
+# Tej Makeup Artist — Luxury Bridal & Editorial Web Application
 
-A full-stack, haute-couture web application designed for a premier luxury bridal and editorial makeup artist. Features a responsive, editorial client interface (ivory/cream/beige with champagne gold accents, serif typography, and whitespace) and a private CMS administration portal for managing bookings, portfolio collections, services, client testimonials, and studio settings.
+A full-stack, haute-couture web application designed for premier luxury bridal and editorial makeup artist Tejas R. Features a responsive, editorial client interface (ivory/cream/beige with champagne gold accents, serif typography, and whitespace) and a private CMS administration portal for managing bookings, portfolio collections, services, client testimonials, and studio settings.
 
 ---
 
@@ -173,7 +173,7 @@ This repository is pre-configured with a root `vercel.json` using **Vercel Servi
 5. Once deployed:
    - Frontend is served at `https://your-domain.vercel.app/`
    - API endpoints are served at `https://your-domain.vercel.app/api/*`
-
+   
 ---
 
 ### 4. Alternative Separate Backend Deployment (Render / Railway)

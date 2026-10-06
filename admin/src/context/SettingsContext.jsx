@@ -4,22 +4,22 @@ import api from '../api/axios';
 const SettingsContext = createContext(null);
 
 export const defaultSettings = {
-  businessName: 'Tej Makeup Artistry',
+  businessName: 'Tej Makeup Artist',
   phone: '+91 91132 32920',
   whatsapp: '+919113232920',
-  whatsappMessage: 'Hi Tej, I would like to inquire about availability for my upcoming wedding/event!',
+  whatsappMessage: 'Hi Tejas R, I would like to inquire about availability for my upcoming wedding/event!',
   email: 'concierge@tejmakeup.com',
   instagram: 'https://www.instagram.com/tej_makeupartist?stkn=MXUxcXE1cXZua2F6Yw%3D%3D&utm_source=qr',
   address: 'Bespoke Private Studio, Bandra West, Mumbai | Worldwide Destination Bookings',
   mapsUrl: 'https://maps.google.com/?q=Bandra+West+Mumbai',
   workingHours: 'Mon - Sun: 08:00 AM - 08:00 PM (By Appointment)',
-  seoTitle: 'Tej Makeup Artistry | Luxury Bridal & Editorial Stylist',
+  seoTitle: 'Tej Makeup Artist | Luxury Bridal & Editorial Stylist',
   seoDescription:
-    'Haute couture bridal artistry, bespoke red-carpet glam, and timeless beauty styling tailored for unforgettable celebrations.',
+    'Haute couture bridal artistry and bespoke beauty styling by Tejas R tailored for unforgettable celebrations.',
   heroHeading: 'Timeless Beauty, Sculpted with Couture Artistry',
   heroSubheading:
     'Haute couture bridal artistry and editorial elegance tailored for the most unforgettable celebrations of your life.',
-  heroImage: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1600&auto=format&fit=crop'
+  heroImage: '/images/IMG_1465.jpg'
 };
 
 export const SettingsProvider = ({ children }) => {

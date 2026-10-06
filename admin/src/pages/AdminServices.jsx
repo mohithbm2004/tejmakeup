@@ -203,7 +203,7 @@ const AdminServices = () => {
                     <td className="py-3 px-4">
                       <div className="w-14 h-14 bg-sand-200 overflow-hidden border border-sand-300">
                         {s.image ? (
-                          <img src={s.image} alt={s.title} className="w-full h-full object-cover" />
+                          <img src={s.image} alt={s.title} className="w-full h-full object-cover object-[center_20%] face-align" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-sand-400">
                             <Sparkles className="w-5 h-5" />
@@ -390,7 +390,7 @@ const AdminServices = () => {
                     <img
                       src={imagePreview}
                       alt="Preview"
-                      className="w-16 h-16 object-cover border border-sand-300 rounded"
+                      className="w-16 h-16 object-cover object-[center_20%] face-align border border-sand-300 rounded"
                     />
                   )}
                   <label className="cursor-pointer px-4 py-2 bg-sand-200 hover:bg-sand-300 text-noir text-xs uppercase tracking-wider font-medium flex items-center gap-2">

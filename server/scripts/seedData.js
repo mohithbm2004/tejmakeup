@@ -4,7 +4,7 @@ import { connectDB } from '../config/db.js';
 
 await connectDB();
 
-console.log('[Seed] Seeding sample data for Tej Makeup Artistry...');
+console.log('[Seed] Seeding sample data for Tej Makeup Artist using local project photography...');
 
 // Clear existing sample collections (preserving users)
 await Promise.all([
@@ -17,7 +17,7 @@ await Promise.all([
   SiteSettings.deleteMany({})
 ]);
 
-// 1. Portfolio Items (10 items)
+// 1. Portfolio Items (10 items using authentic project photos)
 const portfolioData = [
   {
     title: 'The Royal Amber Palace Wedding',
@@ -29,25 +29,19 @@ const portfolioData = [
       'A majestic heritage bridal look crafted for a palace wedding. Soft crimson velvet hues, sculpted cheekbones, and radiant 24k gold leaf eye accents designed to withstand 14 hours of celebration flawlessly.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p1_1',
+        url: '/images/IMG_1465.jpg',
+        publicId: 'local_img_1465',
         alt: 'Royal Amber Palace Bride Full Portrait',
         order: 0
       },
       {
-        url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p1_2',
-        alt: 'Close up soft glam eyes',
+        url: '/images/IMG_1466.jpg',
+        publicId: 'local_img_1466',
+        alt: 'Close up soft glam eyes and veil detail',
         order: 1
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p1_3',
-        alt: 'Jewelry and veil detail',
-        order: 2
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_1465.jpg',
     featured: true,
     published: true,
     displayOrder: 1
@@ -59,22 +53,22 @@ const portfolioData = [
     location: 'The St. Regis, Mumbai',
     eventDate: new Date('2025-12-04'),
     description:
-      'Ultra-luminous glass skin paired with champagne metallic shimmer on eyelids and sculpted glossy lips, harmonizing with an emerald Manish Malhotra couture lehenga.',
+      'Ultra-luminous glass skin paired with champagne metallic shimmer on eyelids and sculpted glossy lips, harmonizing with an emerald couture lehenga.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p2_1',
+        url: '/images/IMG_5119.jpg',
+        publicId: 'local_img_5119',
         alt: 'Reception Glamour Portrait',
         order: 0
       },
       {
-        url: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p2_2',
-        alt: 'Dewy skin glow',
+        url: '/images/IMG_5125.jpg',
+        publicId: 'local_img_5125',
+        alt: 'Dewy skin glow and couture jewelry',
         order: 1
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_5119.jpg',
     featured: true,
     published: true,
     displayOrder: 2
@@ -89,19 +83,25 @@ const portfolioData = [
       'High-fashion graphic symmetry meets raw skin texture. Minimalist micro-concealing with wet-look terracotta wash on lids and bleached brushed arches.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p3_1',
+        url: '/images/IMG_4404.jpg',
+        publicId: 'local_img_4404',
         alt: 'Vogue Editorial Front Angle',
         order: 0
       },
       {
-        url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p3_2',
-        alt: 'Editorial Profile',
+        url: '/images/IMG_4403.jpg',
+        publicId: 'local_img_4403',
+        alt: 'Editorial Profile and Cheek Architecture',
         order: 1
+      },
+      {
+        url: '/images/IMG_4405.jpg',
+        publicId: 'local_img_4405',
+        alt: 'Couture Editorial Macro Details',
+        order: 2
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_4404.jpg',
     featured: true,
     published: true,
     displayOrder: 3
@@ -116,13 +116,19 @@ const portfolioData = [
       'Dreamy sunset tones with soft rose gold lids, fluttering feathered lashes, and a petal-pink stain on lips, reflecting Lake Pichola’s golden hour glow.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p4_1',
+        url: '/images/IMG_5555.jpg',
+        publicId: 'local_img_5555',
         alt: 'Engagement portrait in pastel peach outfit',
         order: 0
+      },
+      {
+        url: '/images/IMG_5560.jpg',
+        publicId: 'local_img_5560',
+        alt: 'Sunset glow close-up',
+        order: 1
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_5555.jpg',
     featured: false,
     published: true,
     displayOrder: 4
@@ -134,16 +140,28 @@ const portfolioData = [
     location: 'Cannes, France',
     eventDate: new Date('2025-05-19'),
     description:
-      'Timeless Hollywood starlet aesthetic reinterpreted: smoldering smoked espresso wings, sculpted cheek architecture, and deep burgundy satin lips.',
+      'Timeless Hollywood starlet aesthetic reinterpreted: smoldering smoked espresso wings, sculpted cheek architecture, and deep satin lips.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p5_1',
+        url: '/images/IMG_6748.jpg',
+        publicId: 'local_img_6748',
         alt: 'Red carpet evening glam',
         order: 0
+      },
+      {
+        url: '/images/IMG_6778.jpg',
+        publicId: 'local_img_6778',
+        alt: 'Sculpted cheek and luminous collarbone',
+        order: 1
+      },
+      {
+        url: '/images/IMG_6784.jpg',
+        publicId: 'local_img_6784',
+        alt: 'Evening lighting profile',
+        order: 2
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_6748.jpg',
     featured: true,
     published: true,
     displayOrder: 5
@@ -158,13 +176,19 @@ const portfolioData = [
       'Subtle luxury for the bride who wants to look authentically herself. Skin preparation using botanical serums, micro-blended foundation, and warm kohl-rimmed waterlines.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p6_1',
+        url: '/images/IMG_7442.jpg',
+        publicId: 'local_img_7442',
         alt: 'Modern minimalist bride Noor',
         order: 0
+      },
+      {
+        url: '/images/IMG_7443.jpg',
+        publicId: 'local_img_7443',
+        alt: 'Delicate kohl and skin radiance detail',
+        order: 1
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_7442.jpg',
     featured: false,
     published: true,
     displayOrder: 6
@@ -179,13 +203,25 @@ const portfolioData = [
       'High-impact sweat-proof glam made for dancing all night under crystal chandeliers. Multi-dimensional chromatic eye pigment and bronzed warm undertones.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p7_1',
+        url: '/images/IMG_1922.jpg',
+        publicId: 'local_img_1922',
         alt: 'Dewy Sangeet makeup look',
         order: 0
+      },
+      {
+        url: '/images/IMG_1923.jpg',
+        publicId: 'local_img_1923',
+        alt: 'Close-up glitter pigment details',
+        order: 1
+      },
+      {
+        url: '/images/IMG_1925.jpg',
+        publicId: 'local_img_1925',
+        alt: 'Luminous cheek finish',
+        order: 2
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_1922.jpg',
     featured: false,
     published: true,
     displayOrder: 7
@@ -200,13 +236,19 @@ const portfolioData = [
       'A study in light, shadow, and architectural elegance. High-definition camera-ready skin with matte contours and subtle glass-balm highlights.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p8_1',
+        url: '/images/IMG_4391.jpg',
+        publicId: 'local_img_4391',
         alt: 'Editorial shoot Milan',
         order: 0
+      },
+      {
+        url: '/images/IMG_4838.jpg',
+        publicId: 'local_img_4838',
+        alt: 'Architectural beauty lighting',
+        order: 1
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_4391.jpg',
     featured: true,
     published: true,
     displayOrder: 8
@@ -221,13 +263,19 @@ const portfolioData = [
       'Bespoke destination wedding styling that withstands seaside breezes and Mediterranean humidity with luminous bronzed undertones and effortless elegance.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p9_1',
+        url: '/images/IMG_5149.jpg',
+        publicId: 'local_img_5149',
         alt: 'Destination Bride Amalfi',
         order: 0
+      },
+      {
+        url: '/images/IMG_5164.jpg',
+        publicId: 'local_img_5164',
+        alt: 'Natural sunlight and veil texture',
+        order: 1
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_5149.jpg',
     featured: false,
     published: true,
     displayOrder: 9
@@ -242,13 +290,19 @@ const portfolioData = [
       'Dramatic feline liner, smoked charcoal edges, and a nude satin lip tailored for an intimate twilight oceanfront celebration.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1516972810927-80185027ca84?q=80&w=1200&auto=format&fit=crop',
-        publicId: 'seed_p10_1',
+        url: '/images/IMG_8231.jpg',
+        publicId: 'local_img_8231',
         alt: 'Velvet twilight glam',
         order: 0
+      },
+      {
+        url: '/images/IMG_8233.jpg',
+        publicId: 'local_img_8233',
+        alt: 'Twilight oceanfront evening portrait',
+        order: 1
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1516972810927-80185027ca84?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/IMG_8231.jpg',
     featured: false,
     published: true,
     displayOrder: 10
@@ -256,9 +310,9 @@ const portfolioData = [
 ];
 
 await Portfolio.insertMany(portfolioData);
-console.log('[Seed] Created 10 portfolio items');
+console.log('[Seed] Created 10 portfolio items using local project photography');
 
-// 2. Services (6 services)
+// 2. Services (6 services using authentic project photos)
 const serviceData = [
   {
     title: 'Haute Couture Bridal Artistry',
@@ -276,7 +330,7 @@ const serviceData = [
     ],
     duration: '3.5 - 4 Hours',
     price: 'From ₹35,000 / $450',
-    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/IMG_1465.jpg',
     featured: true,
     published: true,
     displayOrder: 1
@@ -296,7 +350,7 @@ const serviceData = [
     ],
     duration: '2.5 - 3 Hours',
     price: 'From ₹25,000 / $320',
-    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/IMG_5119.jpg',
     featured: true,
     published: true,
     displayOrder: 2
@@ -316,7 +370,7 @@ const serviceData = [
     ],
     duration: '2 Hours',
     price: 'From ₹20,000 / $260',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/IMG_5555.jpg',
     featured: false,
     published: true,
     displayOrder: 3
@@ -336,7 +390,7 @@ const serviceData = [
     ],
     duration: 'Half Day / Full Day',
     price: 'Price Upon Request',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/IMG_4404.jpg',
     featured: true,
     published: true,
     displayOrder: 4
@@ -356,7 +410,7 @@ const serviceData = [
     ],
     duration: 'Multi-Day Bespoke',
     price: 'Custom Curated Itinerary',
-    image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/IMG_6748.jpg',
     featured: false,
     published: true,
     displayOrder: 5
@@ -376,7 +430,7 @@ const serviceData = [
     ],
     duration: '4 Hours Private Session',
     price: 'From ₹18,000 / $230',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/IMG_1923.jpg',
     featured: false,
     published: true,
     displayOrder: 6
@@ -384,19 +438,19 @@ const serviceData = [
 ];
 
 await Service.insertMany(serviceData);
-console.log('[Seed] Created 6 services');
+console.log('[Seed] Created 6 services with local project photos');
 
-// 3. Testimonials (5 testimonials)
+// 3. Testimonials (5 testimonials using authentic project portraits)
 const testimonialData = [
   {
     clientName: 'Aisha Kapoor-Singhania',
     role: 'Bride, The Oberoi Udaivilas Wedding',
     content:
-      'Tej is an absolute visionary. On my wedding day, amidst the whirlwind of events, her calm aura and meticulous attention to detail gave me the exact radiant, dewy look I had dreamed of since childhood. My makeup stayed intact for 16 straight hours under palace lights and through emotional tears. Every guest asked who did my makeup!',
+      'Tejas R is an absolute visionary. On my wedding day, amidst the whirlwind of events, his calm aura and meticulous attention to detail gave me the exact radiant, dewy look I had dreamed of since childhood. My makeup stayed intact for 16 straight hours under palace lights and through emotional tears. Every guest asked who did my makeup!',
     rating: 5,
     location: 'Udaipur & London',
     eventDate: new Date('2025-11-20'),
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop',
+    avatar: '/images/IMG_1925.jpg',
     featured: true,
     published: true,
     displayOrder: 1
@@ -405,11 +459,11 @@ const testimonialData = [
     clientName: 'Rhea Sen-Gupta',
     role: 'Creative Director, Harper’s Bazaar India',
     content:
-      'Having worked with makeup artists across Milan, Paris, and Mumbai, Tej stands in a rare league. Her understanding of skin undertones, lighting refraction, and editorial balance is second to none. She transforms without masking individuality. A true master of the craft.',
+      'Having worked with makeup artists across Milan, Paris, and Mumbai, Tejas R stands in a rare league. His understanding of skin undertones, lighting refraction, and editorial balance is second to none. He transforms without masking individuality. A true master of the craft.',
     rating: 5,
     location: 'Mumbai',
     eventDate: new Date('2025-10-14'),
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop',
+    avatar: '/images/IMG_2045.jpg',
     featured: true,
     published: true,
     displayOrder: 2
@@ -418,11 +472,11 @@ const testimonialData = [
     clientName: 'Dr. Priya Malhotra',
     role: 'Bride, St. Regis Mumbai',
     content:
-      'As someone who never wears heavy makeup, I was terrified of looking cakey on my big day. Tej listened so patiently, understood my skin sensitivities, and gave me the most ethereal glass-skin look. I felt like the most elevated, confident version of myself.',
+      'As someone who never wears heavy makeup, I was terrified of looking cakey on my big day. Tejas R listened so patiently, understood my skin sensitivities, and gave me the most ethereal glass-skin look. I felt like the most elevated, confident version of myself.',
     rating: 5,
     location: 'Mumbai & New York',
     eventDate: new Date('2025-12-08'),
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop',
+    avatar: '/images/IMG_7443.jpg',
     featured: true,
     published: true,
     displayOrder: 3
@@ -431,11 +485,11 @@ const testimonialData = [
     clientName: 'Natasha Merchant',
     role: 'Destination Bride, Villa d’Este, Lake Como',
     content:
-      'Hiring Tej for our 3-day destination celebration in Italy was the best decision we made. From the breezy welcome party to the sunset ceremony, each look was distinctly stunning yet cohesive. Her punctuality, grace, and professionalism are unmatched.',
+      'Hiring Tejas R for our 3-day destination celebration in Italy was the best decision we made. From the breezy welcome party to the sunset ceremony, each look was distinctly stunning yet cohesive. His punctuality, grace, and professionalism are unmatched.',
     rating: 5,
     location: 'Lake Como, Italy',
     eventDate: new Date('2025-08-25'),
-    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=300&auto=format&fit=crop',
+    avatar: '/images/IMG_5560.jpg',
     featured: true,
     published: true,
     displayOrder: 4
@@ -444,11 +498,11 @@ const testimonialData = [
     clientName: 'Simran Batra',
     role: 'Bride, W Goa Sunset Celebration',
     content:
-      'The Sangeet night in Goa was humid and wild, but my eye makeup and sculpted skin didn’t budge an inch even after 4 hours on the dance floor. Tej’s draping skills also rescued my lehenga dupatta. She goes above and beyond for her brides!',
+      'The Sangeet night in Goa was humid and wild, but my eye makeup and sculpted skin didn’t budge an inch even after 4 hours on the dance floor. Tejas R’s draping skills also rescued my lehenga dupatta. He goes above and beyond for his brides!',
     rating: 5,
     location: 'Goa & New Delhi',
     eventDate: new Date('2026-01-05'),
-    avatar: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=300&auto=format&fit=crop',
+    avatar: '/images/IMG_5164.jpg',
     featured: false,
     published: true,
     displayOrder: 5
@@ -456,77 +510,77 @@ const testimonialData = [
 ];
 
 await Testimonial.insertMany(testimonialData);
-console.log('[Seed] Created 5 testimonials');
+console.log('[Seed] Created 5 testimonials with local project photos');
 
-// 4. Bookings (5 bookings across various statuses)
+// 4. Sample Client Bookings (5 bookings)
 const bookingData = [
   {
-    name: 'Ananya Deshmukh',
+    name: 'Kavya Singhal',
     phone: '+91 98201 11223',
-    email: 'ananya.deshmukh@gmail.com',
-    eventType: 'Bridal & Sangeet',
-    eventDate: new Date('2026-11-24'),
+    email: 'kavya.singhal@outlook.com',
+    eventType: 'Bridal',
+    eventDate: new Date('2026-03-24'),
     location: 'Taj Lands End, Bandra, Mumbai',
-    preferredTime: 'Morning ceremony (07:00 AM start)',
-    people: 3,
-    services: ['Haute Couture Bridal Artistry', 'Entourage Styling'],
-    budget: '₹60,000 - ₹80,000',
-    message: 'Looking for a royal traditional look for the pheras and a chic party glam for the evening.',
+    preferredTime: 'Early Morning (06:00 AM)',
+    people: 1,
+    services: ['Haute Couture Bridal Artistry'],
+    budget: '₹40,000 - ₹50,000',
+    message: 'Looking for a warm crimson lip and timeless heritage glow for my Anand Karaj ceremony.',
     status: 'New'
   },
   {
-    name: 'Meera Sen',
-    phone: '+91 98112 33445',
-    email: 'meera.sen@outlook.com',
-    eventType: 'Engagement',
-    eventDate: new Date('2026-08-15'),
-    location: 'The Leela Palace, Bengaluru',
+    name: 'Ananya Deshmukh',
+    phone: '+91 97654 33210',
+    email: 'ananya.d@gmail.com',
+    eventType: 'Reception',
+    eventDate: new Date('2026-04-12'),
+    location: 'JW Marriott Sahar, Mumbai',
     preferredTime: 'Afternoon (02:00 PM)',
-    people: 1,
-    services: ['Pre-Wedding & Engagement Styling'],
-    budget: '₹25,000',
-    message: 'Pastel lehenga look with natural hair waves and fresh baby’s breath flowers.',
+    people: 3,
+    services: ['Royal Sangeet & Reception Glamour'],
+    budget: '₹60,000+',
+    message: 'Need look for bride + mother of bride and sister. High-glam reception styling.',
     status: 'Contacted'
   },
   {
-    name: 'Tanya Oberoi',
-    phone: '+91 98711 55667',
-    email: 'tanya.oberoi@icloud.com',
-    eventType: 'Multi-Day Destination Wedding',
-    eventDate: new Date('2026-12-10'),
-    location: 'Umaid Bhawan Palace, Jodhpur',
-    preferredTime: 'Full 3 Days',
-    people: 5,
-    services: ['Destination Wedding Bridal Suite'],
-    budget: '₹2,50,000+',
-    message: 'Inquiring for complete bridal suite coverage for Mehendi, Cocktail, and Wedding day.',
+    name: 'Meera Nambiar',
+    phone: '+91 94471 88990',
+    email: 'meera.nambiar@yahoo.com',
+    eventType: 'Engagement',
+    eventDate: new Date('2026-05-02'),
+    location: 'Leela Kovalam, Kerala',
+    preferredTime: 'Sunset (04:30 PM)',
+    people: 1,
+    services: ['Pre-Wedding & Engagement Styling'],
+    budget: '₹25,000',
+    message: 'Outdoor sunset beach engagement. Need humidity-resistant soft dewy look.',
     status: 'Discussion'
   },
   {
-    name: 'Dr. Sneha Rao',
-    phone: '+91 99008 77665',
-    email: 'sneha.rao.md@gmail.com',
-    eventType: 'Reception',
-    eventDate: new Date('2026-07-04'),
-    location: 'JW Marriott Sahar, Mumbai',
-    preferredTime: 'Evening (05:00 PM)',
-    people: 2,
-    services: ['Royal Sangeet & Reception Glamour'],
-    budget: '₹35,000',
-    message: 'Deposit paid. Confirmed date for bride and mother of the bride.',
+    name: 'Tanvi Agarwal',
+    phone: '+91 99300 44556',
+    email: 'tanvi.agarwal@gmail.com',
+    eventType: 'Bridal',
+    eventDate: new Date('2026-06-18'),
+    location: 'Suryagarh Palace, Jaisalmer',
+    preferredTime: 'Full Day (3 Days)',
+    people: 4,
+    services: ['Destination Wedding Bridal Suite'],
+    budget: 'Bespoke Package',
+    message: '3-day royal palace wedding. Confirmed booking with advance deposit.',
     status: 'Confirmed'
   },
   {
-    name: 'Avantika Birla',
-    phone: '+91 98210 99887',
-    email: 'avantika.b@lifestyle.com',
-    eventType: 'Editorial Campaign',
-    eventDate: new Date('2026-02-18'),
-    location: 'Mehboob Studios, Bandra, Mumbai',
-    preferredTime: '09:00 AM - 06:00 PM',
-    people: 4,
+    name: 'Zoya Merchant',
+    phone: '+91 98110 55667',
+    email: 'zoya@merchantcouture.com',
+    eventType: 'Editorial',
+    eventDate: new Date('2026-02-14'),
+    location: 'Famous Studios, Mahalaxmi, Mumbai',
+    preferredTime: 'Full Day (09:00 AM - 06:00 PM)',
+    people: 2,
     services: ['Editorial, Fashion & Campaign Artistry'],
-    budget: 'Commercial Day Rate',
+    budget: 'Standard Agency Day Rate',
     message: 'Spring/Summer jewellery campaign shoot. Successfully completed and paid.',
     status: 'Completed'
   }
@@ -535,15 +589,15 @@ const bookingData = [
 await Booking.insertMany(bookingData);
 console.log('[Seed] Created 5 bookings');
 
-// 5. Before & After Transformations (3 pairs)
+// 5. Before & After Transformations (3 pairs using authentic project photos)
 const beforeAfterData = [
   {
     title: 'Ethereal Radiant Bridal Glow',
     category: 'Bridal',
     description:
       'Correcting hyperpigmentation with micro-thin color theory, sculpting cheek architecture, and finishing with luminous rose-gold wedding radiance.',
-    beforeImage: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop',
+    beforeImage: '/images/IMG_8167.jpg',
+    afterImage: '/images/IMG_8168.jpg',
     published: true,
     featured: true,
     displayOrder: 1
@@ -553,8 +607,8 @@ const beforeAfterData = [
     category: 'Reception',
     description:
       'Elevating bare skin into flawless velvet texture with winged smoked espresso lids and sculpted satin lips for high-impact night events.',
-    beforeImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop',
+    beforeImage: '/images/IMG_8226.jpg',
+    afterImage: '/images/IMG_8227.jpg',
     published: true,
     featured: true,
     displayOrder: 2
@@ -563,9 +617,9 @@ const beforeAfterData = [
     title: 'Modern Dewy Glass Finish',
     category: 'Engagement',
     description:
-      'Minimal coverage, maximum skin glow. Enhancing natural freckles and bone structure for daytime natural sunlight photography.',
-    beforeImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop',
+      'Minimal coverage, maximum skin glow. Enhancing natural facial architecture for daytime natural sunlight photography.',
+    beforeImage: '/images/IMG_7743.jpg',
+    afterImage: '/images/IMG_7744.jpg',
     published: true,
     featured: false,
     displayOrder: 3
@@ -573,15 +627,15 @@ const beforeAfterData = [
 ];
 
 await BeforeAfter.insertMany(beforeAfterData);
-console.log('[Seed] Created 3 before/after transformation pairs');
+console.log('[Seed] Created 3 before/after transformation pairs with local project photos');
 
-// 6. About Profile
+// 6. About Profile (using authentic artist portraits)
 await About.create({
-  name: 'Tejaswini "Tej" Sharma',
+  name: 'Tejas R',
   title: 'Celebrity, Bridal & Haute Couture Makeup Artist',
   tagline: 'Sculpting timeless elegance and skin-first radiance for the world’s most memorable celebrations.',
   bio:
-    'Trained in London and Paris with over 8 years of international artistry experience, Tej has established herself as one of India’s most sought-after luxury bridal specialists. Her signature aesthetic celebrates authentic feminine grace—creating second-skin luminosity, bespoke lash architecture, and effortless elegance.',
+    'Trained across premier beauty institutes with over 8 years of luxury artistry experience, Tejas R has established himself as one of India’s most sought-after bridal specialists. His signature aesthetic celebrates authentic feminine grace—creating second-skin luminosity, bespoke lash architecture, and effortless elegance.',
   paragraphs: [
     'My philosophy begins with the skin. I believe true luxury lies in restraint and precision—illuminating your finest features without ever creating a heavy, mask-like barrier. Every bride deserves to walk toward her future feeling unconditionally radiant, confident, and undeniably herself.',
     'Over the past decade, my work has traversed royal palace weddings in Rajasthan, sun-drenched estates in Lake Como, fashion weeks in Milan, and editorial covers across India. Each bridal booking is treated as an intimate bespoke commission, tailored precisely to your facial geometry, attire colorimetry, and heritage.',
@@ -590,8 +644,8 @@ await About.create({
   experienceYears: 8,
   eventsCompleted: 750,
   clientsSatisfied: 99,
-  image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop',
-  secondaryImage: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop',
+  image: '/images/IMG_1930.jpg',
+  secondaryImage: '/images/IMG_2045.jpg',
   philosophy:
     'Artistry that honors the woman beneath the lehenga. Timeless, never trendy; luminous, never masked.',
   signatureStyle: 'Second-skin glass finish, sculpted micro-contour, romantic winged eyes & bespoke lash mapping.',
@@ -611,28 +665,28 @@ await About.create({
   featured: true,
   displayOrder: 1
 });
-console.log('[Seed] Created About profile');
+console.log('[Seed] Created About profile with local project photo');
 
-// 7. Site Settings
+// 7. Site Settings (using authentic hero photography)
 await SiteSettings.create({
-  businessName: 'Tej Makeup Artistry',
+  businessName: 'Tej Makeup Artist',
   phone: '+91 91132 32920',
   whatsapp: '+919113232920',
-  whatsappMessage: 'Hi Tej, I would love to check your availability and package details for my wedding/event!',
+  whatsappMessage: 'Hi Tejas R, I would love to check your availability and package details for my wedding/event!',
   email: 'concierge@tejmakeup.com',
   instagram: 'https://www.instagram.com/tej_makeupartist?stkn=MXUxcXE1cXZua2F6Yw%3D%3D&utm_source=qr',
   address: 'Bespoke Private Studio, Bandra West, Mumbai | Available Worldwide for Destinations',
   mapsUrl: 'https://maps.google.com/?q=Bandra+West+Mumbai',
   workingHours: 'Mon – Sun: 08:00 AM – 08:00 PM (Strictly by prior appointment)',
-  seoTitle: 'Tej Makeup Artistry | Luxury Bridal & Haute Editorial Stylist Mumbai',
+  seoTitle: 'Tej Makeup Artist | Luxury Bridal & Haute Editorial Stylist Mumbai',
   seoDescription:
-    'Exquisite luxury bridal and editorial makeup artistry by Tej. Luminous glass-skin transformations, heritage wedding couture, and destination styling worldwide.',
+    'Exquisite luxury bridal and editorial makeup artistry by Tejas R. Luminous glass-skin transformations, heritage wedding couture, and destination styling worldwide.',
   heroHeading: 'Timeless Beauty, Sculpted with Couture Artistry',
   heroSubheading:
     'Haute couture bridal artistry and editorial elegance tailored for the most unforgettable celebrations of your life.',
-  heroImage: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1600&auto=format&fit=crop'
+  heroImage: '/images/IMG_1465.jpg'
 });
-console.log('[Seed] Created default Site Settings');
+console.log('[Seed] Created default Site Settings with local project hero photo');
 
-console.log('[Seed] Database seeding completed successfully!');
+console.log('[Seed] Database seeding completed successfully with 100% local project photos!');
 process.exit(0);

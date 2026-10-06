@@ -5,10 +5,19 @@ import { useSettings } from '../context/SettingsContext';
 const InstagramGrid = ({ items = [] }) => {
   const { settings } = useSettings();
 
-  // Extract photos from portfolio or use defaults
-  const photos = items.slice(0, 6).map((item, idx) => ({
+  const defaultPhotos = [
+    '/images/IMG_1465.jpg',
+    '/images/IMG_1466.jpg',
+    '/images/IMG_1922.jpg',
+    '/images/IMG_1923.jpg',
+    '/images/IMG_1925.jpg',
+    '/images/IMG_1930.jpg'
+  ];
+
+  // Extract photos from portfolio or use local project defaults
+  const photos = (items.length > 0 ? items.slice(0, 6) : defaultPhotos.map((url, idx) => ({ _id: idx, coverImage: url, title: 'Tej Makeup Artist Portfolio', category: 'Bridal' }))).map((item, idx) => ({
     id: item._id || idx,
-    url: item.coverImage || item.images?.[0]?.url || 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800',
+    url: item.coverImage || item.images?.[0]?.url || defaultPhotos[idx % defaultPhotos.length],
     title: item.title,
     category: item.category
   }));
@@ -55,7 +64,7 @@ const InstagramGrid = ({ items = [] }) => {
             <img
               src={photo.url}
               alt={photo.title || 'Instagram bridal post'}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-cover object-[center_20%] face-align transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
             />
             {/* Dark editorial overlay */}

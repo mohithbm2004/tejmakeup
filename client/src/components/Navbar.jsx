@@ -53,7 +53,7 @@ const Navbar = () => {
               isOpen || isTransparent ? 'text-ivory group-hover:text-champagne-300' : 'text-noir group-hover:text-champagne-600'
             }`}
           >
-            {settings.businessName || 'Tej Makeup'}
+            {settings.businessName || 'Tej Makeup Artist'}
           </span>
           <span
             className={`hidden sm:block text-[8px] uppercase tracking-ultra font-medium transition-colors ${

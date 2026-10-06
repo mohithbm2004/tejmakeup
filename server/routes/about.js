@@ -30,7 +30,7 @@ r.get('/admin', protect, async (req, res) => {
     let about = await About.findOne();
     if (!about) {
       about = await About.create({
-        name: 'Tej / Tejaswini',
+        name: 'Tejas R',
         title: 'Master Bridal & Editorial Makeup Artist',
         tagline: 'Sculpting timeless radiance with couture artistry',
         experienceYears: 8,

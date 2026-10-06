@@ -342,7 +342,7 @@ const AdminPortfolio = () => {
                         <img
                           src={item.coverImage || item.images?.[0]?.url}
                           alt={item.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover object-[center_20%] face-align"
                         />
                       </div>
                     </td>
@@ -555,7 +555,7 @@ const AdminPortfolio = () => {
                           isCover ? 'border-champagne-600 ring-2 ring-champagne-300' : 'border-sand-300'
                         }`}
                       >
-                        <img src={img.url} alt={`Look ${idx}`} className="w-full h-full object-cover" />
+                        <img src={img.url} alt={`Look ${idx}`} className="w-full h-full object-cover object-[center_20%] face-align" />
                         
                         {/* Badges & Reorder Controls */}
                         <div className="absolute top-1 left-1 flex items-center gap-1">
@@ -621,7 +621,7 @@ const AdminPortfolio = () => {
                           isCover ? 'border-champagne-600 ring-2 ring-champagne-300' : 'border-sand-400'
                         }`}
                       >
-                        <img src={item.preview} alt={`New ${idx}`} className="w-full h-full object-cover" />
+                        <img src={item.preview} alt={`New ${idx}`} className="w-full h-full object-cover object-[center_20%] face-align" />
                         <span className="absolute top-1 left-1 bg-emerald-600 text-white text-[9px] uppercase px-1.5 py-0.5">
                           New
                         </span>

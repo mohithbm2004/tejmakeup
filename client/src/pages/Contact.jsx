@@ -38,7 +38,7 @@ const Contact = () => {
     <>
       <SEO
         title="Contact & Studio"
-        description="Get in touch with Tej Makeup Artistry. Visit our private Bandra studio or connect with our bridal concierge."
+        description="Get in touch with Tej Makeup Artist. Visit our private Bandra studio or connect with our bridal concierge."
       />
 
       <div className="pt-32 pb-24 bg-ivory-100 min-h-screen">
@@ -126,7 +126,7 @@ const Contact = () => {
                   </p>
                   <a
                     href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
-                      settings.whatsappMessage || 'Hello Tej'
+                      settings.whatsappMessage || 'Hello Tejas R'
                     )}`}
                     target="_blank"
                     rel="noreferrer"

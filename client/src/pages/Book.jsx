@@ -104,7 +104,7 @@ const Book = () => {
       day: 'numeric'
     });
 
-    const msg = `Hi Tej! ✨ I just submitted an inquiry for my ${submittedBooking.eventType} on ${dateFormatted} in ${submittedBooking.location}. 
+    const msg = `Hi Tejas R! ✨ I just submitted an inquiry for my ${submittedBooking.eventType} on ${dateFormatted} in ${submittedBooking.location}. 
 
 Name: ${submittedBooking.name}
 Phone: ${submittedBooking.phone}
@@ -119,7 +119,7 @@ I would love to confirm your availability and discuss next steps!`;
     <>
       <SEO
         title="Reserve Your Date & Private Consultation"
-        description="Check date availability and reserve bespoke bridal styling with Tej Makeup Artistry."
+        description="Check date availability and reserve bespoke bridal styling with Tej Makeup Artist."
       />
 
       <div className="pt-32 pb-24 bg-ivory-100 min-h-screen">

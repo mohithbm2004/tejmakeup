@@ -29,7 +29,7 @@ const About = () => {
     <>
       <SEO
         title="About the Artist"
-        description={about?.tagline || 'Discover the journey and artistic ethos behind Tej Makeup Artistry.'}
+        description={about?.tagline || 'Discover the journey and artistic ethos behind Tej Makeup Artist.'}
       />
 
       <div className="pt-32 pb-24 bg-ivory-100 min-h-screen">
@@ -40,7 +40,7 @@ const About = () => {
               The Atelier & Visionary
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl text-noir font-normal">
-              {about?.name || 'Tejaswini Sharma'}
+              {about?.name || 'Tejas R'}
             </h1>
             <p className="text-sand-600 text-sm font-light uppercase tracking-wider">
               {about?.title || 'Master Bridal & Haute Editorial Makeup Artist'}
@@ -55,10 +55,10 @@ const About = () => {
                 <img
                   src={
                     about?.image ||
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop'
+                    '/images/IMG_1930.jpg'
                   }
-                  alt={about?.name || 'Tej'}
-                  className="w-full h-full object-cover"
+                  alt={about?.name || 'Tejas R'}
+                  className="w-full h-full object-cover object-[center_20%] face-align"
                 />
               </div>
 
@@ -87,7 +87,7 @@ const About = () => {
                 </h2>
                 <p className="text-sand-700 text-sm sm:text-base leading-relaxed font-light">
                   {about?.bio ||
-                    'With a career that started at prestigious beauty institutes in London and refined across editorial runways in Paris and Mumbai, Tej has emerged as the premier choice for brides who seek timeless royalty.'}
+                    'With a career that started at prestigious beauty institutes and refined across editorial runways and luxury weddings, Tejas R has emerged as the premier choice for brides who seek timeless royalty.'}
                 </p>
               </div>
 

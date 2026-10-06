@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="space-y-5">
             <Link to="/" className="inline-block">
               <span className="font-serif text-3xl tracking-widest text-noir uppercase font-medium">
-                {settings.businessName || 'Tej Makeup'}
+                {settings.businessName || 'Tej Makeup Artist'}
               </span>
               <span className="block text-[10px] uppercase tracking-ultra text-champagne-600 font-semibold mt-1">
                 Luxury Bridal & Editorial Artistry
@@ -111,7 +111,7 @@ const Footer = () => {
               {settings.whatsapp && (
                 <a
                   href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
-                    settings.whatsappMessage || 'Hello Tej'
+                    settings.whatsappMessage || 'Hello Tejas R'
                   )}`}
                   target="_blank"
                   rel="noreferrer"

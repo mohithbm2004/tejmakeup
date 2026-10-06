@@ -175,7 +175,7 @@ const AdminSettings = () => {
               type="text"
               value={form.whatsappMessage || ''}
               onChange={(e) => setForm({ ...form, whatsappMessage: e.target.value })}
-              placeholder="Hi Tej, I would love to check your availability for my upcoming wedding/event!"
+              placeholder="Hi Tejas R, I would love to check your availability for my upcoming wedding/event!"
               className="w-full px-3 py-2 text-xs bg-sand-50 border border-sand-300 focus:outline-none focus:border-champagne-500"
             />
           </div>

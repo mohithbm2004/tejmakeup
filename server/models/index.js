@@ -86,8 +86,8 @@ export const About = model(
   'About',
   new Schema(
     {
-      name: { type: String, default: 'Tej / Tejaswini' },
-      title: { type: String, default: 'Celebrity & Bridal Makeup Artist' },
+      name: { type: String, default: 'Tejas R' },
+      title: { type: String, default: 'Celebrity, Bridal & Haute Couture Makeup Artist' },
       tagline: { type: String, default: 'Sculpting timeless radiance with couture artistry' },
       bio: { type: String, default: '' },
       paragraphs: [{ type: String }],
@@ -158,23 +158,23 @@ export const SiteSettings = model(
   'SiteSettings',
   new Schema(
     {
-      businessName: { type: String, default: 'Tej Makeup Artistry' },
+      businessName: { type: String, default: 'Tej Makeup Artist' },
       phone: { type: String, default: '+91 91132 32920' },
       whatsapp: { type: String, default: '+919113232920' },
       whatsappMessage: {
         type: String,
-        default: 'Hi Tej, I would love to inquire about availability for my upcoming wedding/event!'
+        default: 'Hi Tejas R, I would love to inquire about availability for my upcoming wedding/event!'
       },
       email: { type: String, default: 'contact@tejmakeup.com' },
       instagram: { type: String, default: 'https://www.instagram.com/tej_makeupartist?stkn=MXUxcXE1cXZua2F6Yw%3D%3D&utm_source=qr' },
       address: { type: String, default: 'Bespoke Studio, Mumbai / Available Worldwide' },
       mapsUrl: { type: String, default: 'https://maps.google.com' },
       workingHours: { type: String, default: 'Mon - Sun: 08:00 AM - 08:00 PM (By Appointment)' },
-      seoTitle: { type: String, default: 'Tej Makeup Artistry | Luxury Bridal & Editorial Stylist' },
+      seoTitle: { type: String, default: 'Tej Makeup Artist | Luxury Bridal & Editorial Stylist' },
       seoDescription: {
         type: String,
         default:
-          'High-end luxury makeup artist specializing in bespoke bridal, red carpet, and editorial artistry with timeless dewy elegance.'
+          'High-end luxury makeup artist Tejas R specializing in bespoke bridal, red carpet, and editorial artistry with timeless dewy elegance.'
       },
       heroHeading: { type: String, default: 'Timeless Beauty, Sculpted to Perfection' },
       heroSubheading: {

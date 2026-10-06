@@ -77,7 +77,7 @@ const Portfolio = () => {
     <>
       <SEO
         title="Portfolio Gallery"
-        description="Explore the haute couture bridal portfolio, editorial lookbooks, and red carpet transformations by Tej."
+        description="Explore the haute couture bridal portfolio, editorial lookbooks, and red carpet transformations by Tejas R."
       />
 
       <div className="pt-32 pb-24 bg-ivory-100 min-h-screen">
@@ -134,7 +134,7 @@ const Portfolio = () => {
                   <img
                     src={item.coverImage || item.images?.[0]?.url}
                     alt={item.title}
-                    className="w-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
+                    className="w-full object-cover object-[center_20%] face-align transition-transform duration-700 group-hover:scale-105 cursor-pointer"
                     loading="lazy"
                     onClick={() => setLightboxIndex(idx)}
                   />

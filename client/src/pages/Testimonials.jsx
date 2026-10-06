@@ -74,7 +74,7 @@ const Testimonials = () => {
                       <img
                         src={t.avatar}
                         alt={t.clientName}
-                        className="w-11 h-11 rounded-full object-cover border border-champagne-400"
+                        className="w-11 h-11 rounded-full object-cover object-[center_20%] face-align border border-champagne-400"
                       />
                     ) : (
                       <div className="w-11 h-11 rounded-full bg-champagne-100 text-champagne-700 font-serif font-semibold flex items-center justify-center border border-champagne-300">
@@ -101,7 +101,7 @@ const Testimonials = () => {
           {/* Bottom CTA */}
           <div className="mt-20 p-12 bg-sand-50 border border-sand-300 text-center max-w-3xl mx-auto space-y-4">
             <h3 className="font-serif text-3xl text-noir font-normal">
-              Experience the Tej Artistry Touch
+              Experience the Artistry of Tejas R
             </h3>
             <p className="text-sand-600 text-xs leading-relaxed max-w-lg mx-auto font-light">
               We look forward to writing a beautiful story together on your wedding day.

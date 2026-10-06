@@ -46,7 +46,7 @@ const AdminLayout = () => {
         <div className="p-6 border-b border-sand-800/80">
           <Link to="/" className="block">
             <span className="font-serif text-xl tracking-widest text-ivory uppercase font-medium">
-              {settings.businessName || 'Tej Makeup'}
+              {settings.businessName || 'Tej Makeup Artist'}
             </span>
             <span className="block text-[9px] uppercase tracking-ultra text-champagne-400 font-medium mt-0.5">
               Atelier CMS Portal

@@ -2,6 +2,8 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { connectDB } from './config/db.js';
 import auth from './routes/auth.js';
 import portfolio from './routes/portfolio.js';
@@ -13,7 +15,13 @@ import bookings from './routes/bookings.js';
 import settings from './routes/settings.js';
 import stats from './routes/stats.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
+
+// Serve local project images statically
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // Security headers
 app.use(

@@ -87,13 +87,13 @@ const BeforeAfterSlider = ({ initialItems }) => {
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
-        className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden select-none cursor-ew-resize border border-sand-300 shadow-xl bg-sand-100 touch-none"
+        className="relative aspect-[4/5] sm:aspect-[4/3] md:aspect-[16/10] max-h-[620px] w-full overflow-hidden select-none cursor-ew-resize border border-sand-300 shadow-xl bg-sand-100 touch-none mx-auto"
       >
         {/* AFTER Image (Full background) */}
         <img
           src={current.afterImage}
           alt={`After transformation - ${current.title}`}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-[center_20%] pointer-events-none face-align"
         />
         <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-noir/70 backdrop-blur-md text-ivory text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 sm:px-3 py-1 font-medium pointer-events-none border border-champagne-500/30">
           Couture Glow (After)
@@ -107,7 +107,7 @@ const BeforeAfterSlider = ({ initialItems }) => {
           <img
             src={current.beforeImage}
             alt={`Before transformation - ${current.title}`}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[center_20%] face-align"
           />
           <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-noir/70 backdrop-blur-md text-ivory text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 sm:px-3 py-1 font-medium pointer-events-none border border-sand-400/30">
             Natural Canvas (Before)
