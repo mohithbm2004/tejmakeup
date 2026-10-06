@@ -17,9 +17,9 @@ const defaultSettings = {
   seoTitle: 'Tej Makeup Artist | Luxury Bridal & Editorial Stylist',
   seoDescription:
     'Haute couture bridal artistry and bespoke beauty styling by Tejas R tailored for unforgettable celebrations.',
-  heroHeading: 'Timeless Beauty, Sculpted to Perfection',
-  heroSubheading: 'Haute couture bridal artistry and editorial elegance tailored for unforgettable moments.',
-  heroImage: '/images/IMG_1465.jpg'
+  heroHeading: 'Timeless Beauty, Sculpted with Couture Artistry',
+  heroSubheading: 'Haute couture bridal artistry and editorial elegance tailored for the most unforgettable celebrations of your life.',
+  heroImage: '/images/tejas_hero.jpg'
 };
 
 r.get('/', async (req, res) => {

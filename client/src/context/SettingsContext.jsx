@@ -19,7 +19,7 @@ export const defaultSettings = {
   heroHeading: 'Timeless Beauty, Sculpted with Couture Artistry',
   heroSubheading:
     'Haute couture bridal artistry and editorial elegance tailored for the most unforgettable celebrations of your life.',
-  heroImage: '/images/IMG_1465.jpg'
+  heroImage: '/images/tejas_hero.jpg'
 };
 
 export const SettingsProvider = ({ children }) => {

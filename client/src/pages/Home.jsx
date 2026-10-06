@@ -56,77 +56,113 @@ const Home = () => {
         description={settings.seoDescription}
       />
 
-      {/* Hero Section - Cinematic Luxury Editorial */}
-      <section className="relative min-h-[96vh] flex items-center justify-center pt-44 pb-28 overflow-hidden bg-[#0D0D0D]">
-        {/* Cinematic background with subtle zoom */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.img
-            initial={{ scale: 1.08 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 7, ease: 'easeOut' }}
-            src={
-              settings.heroImage ||
-              '/images/IMG_1465.jpg'
-            }
-            alt="Haute bridal and editorial makeup artistry"
-            className="w-full h-full object-cover object-[center_22%] face-align opacity-55 brightness-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/40 to-[#0D0D0D]/70" />
+      {/* Hero Section - Haute Editorial Luxury */}
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-24 sm:pt-32 lg:pt-36 pb-14 sm:pb-20 overflow-hidden bg-[#0A0A0A]">
+        {/* Ambient atmospheric lighting */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-champagne-500/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/3 left-10 w-80 h-80 bg-champagne-400/5 rounded-full blur-[100px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900/40 via-[#0A0A0A]/90 to-[#0A0A0A]" />
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            className="space-y-4"
-          >
-            <span className="inline-block text-[11px] uppercase tracking-[0.35em] text-champagne-300 font-medium">
-              {settings.businessName || 'TEJ MAKEUP'} • BEAUTY, REFINED
-            </span>
-            <p className="text-xs uppercase tracking-widest text-sand-300 font-light">
-              Bridal • Editorial • Occasion
-            </p>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light text-ivory leading-[1.08] tracking-tight max-w-4xl mx-auto break-words"
-          >
-            {settings.heroHeading || 'Skin that breathes. Makeup so precise, it disappears into you.'}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-sand-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light"
-          >
-            {settings.heroSubheading ||
-              'No flashback in photographs. No heavy cakey finish under the mandap lights. Just timeless, radiant elegance tailored for your defining moment.'}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-5"
-          >
-            <Link
-              to="/book"
-              className="w-full sm:w-auto px-9 py-4 bg-champagne-600 text-ivory text-xs uppercase tracking-[0.25em] font-medium hover:bg-champagne-500 transition-all duration-300 shadow-xl"
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Column: Couture Typography & CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: 'easeOut' }}
+              className="lg:col-span-7 text-center lg:text-left space-y-5 sm:space-y-7 order-2 lg:order-1"
             >
-              BOOK YOUR DATE
-            </Link>
-            <Link
-              to="/portfolio"
-              className="w-full sm:w-auto px-9 py-4 bg-transparent border border-ivory/40 text-ivory text-xs uppercase tracking-[0.25em] font-medium hover:bg-ivory hover:text-noir transition-all duration-300"
+              <div className="space-y-2.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-champagne-500/10 border border-champagne-400/25 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-champagne-400 animate-pulse" />
+                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-champagne-300 font-medium">
+                    {settings.businessName || 'TEJ MAKEUP ARTIST'}
+                  </span>
+                </div>
+                <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-sand-300 font-light block">
+                  BRIDAL • EDITORIAL • OCCASION
+                </p>
+              </div>
+
+              <h1 className="font-serif text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-light text-ivory leading-[1.12] tracking-tight break-words">
+                {settings.heroHeading || 'Timeless Beauty, Sculpted with Couture Artistry'}
+              </h1>
+
+              <p className="text-sand-300 text-xs sm:text-base lg:text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                {settings.heroSubheading ||
+                  'Haute couture bridal artistry and editorial elegance tailored for the most unforgettable celebrations of your life.'}
+              </p>
+
+              {/* Action Buttons */}
+              <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <Link
+                  to="/book"
+                  className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-champagne-600 text-ivory text-xs uppercase tracking-[0.25em] font-medium hover:bg-champagne-500 transition-all duration-300 shadow-xl text-center"
+                >
+                  BOOK YOUR DATE
+                </Link>
+                <Link
+                  to="/portfolio"
+                  className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-transparent border border-ivory/30 text-ivory text-xs uppercase tracking-[0.25em] font-medium hover:bg-ivory hover:text-noir transition-all duration-300 text-center"
+                >
+                  VIEW PORTFOLIO
+                </Link>
+              </div>
+
+              {/* Trust & Craftsmanship Accents */}
+              <div className="pt-4 sm:pt-6 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-4 text-center lg:text-left max-w-md mx-auto lg:mx-0">
+                <div>
+                  <div className="font-serif text-lg sm:text-2xl text-champagne-300 font-light">10+</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-sand-400">Years Mastery</div>
+                </div>
+                <div>
+                  <div className="font-serif text-lg sm:text-2xl text-champagne-300 font-light">500+</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-sand-400">Brides Styled</div>
+                </div>
+                <div>
+                  <div className="font-serif text-lg sm:text-2xl text-champagne-300 font-light">Global</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-sand-400">Destination Ready</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Hero Portrait of Tejas R */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
+              className="lg:col-span-5 flex justify-center order-1 lg:order-2"
             >
-              VIEW PORTFOLIO
-            </Link>
-          </motion.div>
+              <div className="relative w-full max-w-[260px] xs:max-w-[280px] sm:max-w-sm lg:max-w-md group">
+                {/* Subtle champagne halo glow behind photo */}
+                <div className="absolute -inset-2 bg-gradient-to-tr from-champagne-600/20 via-transparent to-champagne-400/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-700" />
+                
+                {/* Frame */}
+                <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-neutral-900 shadow-2xl">
+                  <img
+                    src={settings.heroImage || '/images/tejas_hero.jpg'}
+                    alt="Tejas R - Tej Makeup Artist"
+                    className="w-full h-auto aspect-[3/4] object-cover object-[center_18%] filter brightness-95 contrast-[1.02] transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                  {/* Bottom Vignette / Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10 pointer-events-none" />
+
+                  {/* Elegant Floating Badge */}
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 p-2.5 sm:p-3 bg-noir/80 backdrop-blur-md border border-white/10 rounded-lg flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-serif text-ivory tracking-wide">Tejas R</p>
+                      <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-champagne-300 font-light">Founder & Master Artist</p>
+                    </div>
+                    <span className="w-2 h-2 rounded-full bg-champagne-400" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 

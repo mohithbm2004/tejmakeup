@@ -684,9 +684,9 @@ await SiteSettings.create({
   heroHeading: 'Timeless Beauty, Sculpted with Couture Artistry',
   heroSubheading:
     'Haute couture bridal artistry and editorial elegance tailored for the most unforgettable celebrations of your life.',
-  heroImage: '/images/IMG_1465.jpg'
+  heroImage: '/images/tejas_hero.jpg'
 });
-console.log('[Seed] Created default Site Settings with local project hero photo');
+console.log('[Seed] Created default Site Settings with Tejas R hero photo');
 
 console.log('[Seed] Database seeding completed successfully with 100% local project photos!');
 process.exit(0);
