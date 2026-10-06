@@ -147,17 +147,6 @@ const Home = () => {
                     alt="Tejas R - Tej Makeup Artist"
                     className="w-full h-auto aspect-[3/4] object-cover object-[center_18%] filter brightness-95 contrast-[1.02] transition-transform duration-700 group-hover:scale-[1.02]"
                   />
-                  {/* Bottom Vignette / Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10 pointer-events-none" />
-
-                  {/* Elegant Floating Badge */}
-                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 p-2.5 sm:p-3 bg-noir/80 backdrop-blur-md border border-white/10 rounded-lg flex items-center justify-between">
-                    <div>
-                      <p className="text-xs font-serif text-ivory tracking-wide">Tejas R</p>
-                      <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-champagne-300 font-light">Founder & Master Artist</p>
-                    </div>
-                    <span className="w-2 h-2 rounded-full bg-champagne-400" />
-                  </div>
                 </div>
               </div>
             </motion.div>
